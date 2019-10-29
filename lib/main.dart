@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       ),
       // Hier wird eine Instanz erstellt mit new ist aber nicht
       // zwingend notwendig
+      // Einmal ein Commit
       home: new HomeScreen(),
     );
   }
