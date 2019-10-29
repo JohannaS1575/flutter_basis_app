@@ -8,6 +8,17 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Home"),
+        leading: Icon(Icons.arrow_back),
+        actions: <Widget>[
+          Icon(Icons.functions),
+
+        ],
+      ),
+
+
+    );
   }
 }
