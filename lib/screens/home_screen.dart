@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basis_app/screens/havaneser_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,8 +14,23 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text("Home"),
         leading: Icon(Icons.arrow_back),
         actions: <Widget>[
-          Icon(Icons.functions),
+          Icon(Icons.restaurant_menu),
 
+        ],
+      ),
+
+      body: Column(
+        children: <Widget>[
+          RaisedButton(
+            child: Text("Havaneser"),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute
+                (builder: (context) => HavaneserScreen(),
+                ),
+              );
+            },
+          ),
         ],
       ),
 
