@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basis_app/screens/beagle_screen.dart';
 import 'package:flutter_basis_app/screens/havaneser_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -21,20 +22,34 @@ class _HomeScreenState extends State<HomeScreen> {
 
       body: Column(
         children: <Widget>[
+          buildRaisedHunderasseButton(context),
+
+
           RaisedButton(
-            child: Text("Havaneser"),
+            child: Text("Beagle"),
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute
-                (builder: (context) => HavaneserScreen(),
+                context, MaterialPageRoute
+                (builder: (context) => BeagleScreen(),
                 ),
               );
             },
           ),
         ],
       ),
-
-
     );
+  }
+
+  RaisedButton buildRaisedHunderasseButton(BuildContext context) {
+    return RaisedButton(
+          child: Text("Havaneser"),
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute
+              (builder: (context) => HavaneserScreen(),
+              ),
+            );
+          },
+        );
   }
 }
